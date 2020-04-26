@@ -12,12 +12,26 @@ const Section = styled.section`
   padding: 10px;
 `;
 
+const tempArr = [
+  {
+    name: "Joe",
+    lastName: "Joe",
+    email: "joe@gmail.com",
+    age: 24,
+    onlineStatus: true,
+  },
+];
+
 function App() {
   return (
     <div className="App">
       <Header />
       <Section>
-        <Headline header="Posts" desc="Click the button to render posts" />
+        <Headline
+          header="Posts"
+          desc="Click the button to render posts"
+          tempArr={tempArr}
+        />
       </Section>
     </div>
   );
