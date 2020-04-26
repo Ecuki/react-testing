@@ -3,8 +3,8 @@ import { StyledHeader, StyledLogo } from "./styled";
 
 export default function Header() {
   return (
-    <StyledHeader>
-      <StyledLogo></StyledLogo>
+    <StyledHeader data-test="headerComponent">
+      <StyledLogo data-test="logo" />
     </StyledHeader>
   );
 }
