@@ -38,8 +38,8 @@ describe("fetchPosts action", () => {
 
     return store.dispatch(fetchPosts()).then(() => {
       const newState = store.getState();
-      console.log(newState);
-      expect(newState.reducer).toBe(expectedState);
+
+      expect(newState.posts).toBe(expectedState);
     });
   });
 });

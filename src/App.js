@@ -38,7 +38,7 @@ function App({ fetchPosts, posts }) {
   };
 
   return (
-    <div className="App">
+    <div className="App" data-test="appComponent">
       <Header />
       <Section>
         <Headline
@@ -48,7 +48,7 @@ function App({ fetchPosts, posts }) {
         />
         <Button {...configButton} />
         {posts.length > 0 && (
-          <div>
+          <>
             {posts.map((post) => {
               const { title, body } = post;
               const postConfig = {
@@ -57,7 +57,7 @@ function App({ fetchPosts, posts }) {
               };
               return <Post key={post.id} {...postConfig} />;
             })}
-          </div>
+          </>
         )}
       </Section>
     </div>
@@ -66,7 +66,7 @@ function App({ fetchPosts, posts }) {
 
 const mapStateToProps = (state) => {
   return {
-    posts: state.reducer,
+    posts: state.posts,
   };
 };
 
